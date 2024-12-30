@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Page1 extends StatefulWidget {
 
@@ -8,7 +9,14 @@ class Page1 extends StatefulWidget {
 
 class _Page1State extends State<Page1> {
   String isSelectedDrop = 'Debit';
+  DateTime selectect = DateTime.now();
+  DateFormat ThisMonth = DateFormat.M();
+  DateFormat ThisDate = DateFormat.d();
+
+
   List<String> dataDropList = ['Debit', 'Credit', 'Brows', 'Loan',];
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -69,13 +77,17 @@ class _Page1State extends State<Page1> {
 
                   onChanged: (value){
                     isSelectedDrop = value ?? 'Debit';
-                    setState(() {});
+
+                    setState(() {
+                    });
                   }),
-            );}
-          )
+            );},),
+
+          
 
         ],
       ),
     );
   }
-}
+  }
+

@@ -13,8 +13,8 @@ class _Page1State extends State<Page1> {
   String dropdawon = 'Debit';
 
 
-  bool isvisible = false;
-  bool isvisible1 = false;
+  bool isvisible = true;
+  bool isvisible1 = true;
   bool isArows = false;
 
   bool checkbox = false;
@@ -76,7 +76,6 @@ class _Page1State extends State<Page1> {
               ),
             ),
 
-        
           SizedBox(
             height: 11,
           ),
@@ -84,9 +83,9 @@ class _Page1State extends State<Page1> {
 
           /// On Tap Value nibisare true and false
           TextField(
-
+            obscuringCharacter: "*",
             /// Initial Value:
-             obscureText: !isvisible1,
+             obscureText: isvisible1,
 
             decoration: InputDecoration(
               suffixIcon:InkWell(
