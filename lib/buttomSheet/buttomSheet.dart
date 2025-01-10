@@ -55,13 +55,14 @@ class _ButttomSheetPageState extends State<ButttomSheetPage> {
               );
             },
             child: Center(
+
               child: Container(
                 height: 70,
                 width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(21),
                     border: Border.all(color: Colors.black)),
-                child:selectedInex >=0? Row(
+                child:selectedInex >=0 ? Row(
                   children: [
 
                     Image(image: AssetImage(AppConstant.mdataB[selectedInex].imagPath),width: 60,height: 60,),

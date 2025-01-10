@@ -8,6 +8,7 @@ import 'package:untitled/amount_date_add/note_model.dart';
 void main(){
   runApp(AppAmountDate());
 }
+
 class  AppAmountDate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,6 +25,7 @@ class  HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   var amountController = TextEditingController();
 
   AmountDateDbHelper amountDateDbHelper = AmountDateDbHelper.getInstance();
@@ -32,6 +34,7 @@ class _HomePageState extends State<HomePage> {
 
   /// Fillter age call hobo tar pisut ui build hobo
   /// Step5
+
   List<FillterModel>fillterData = [];
 
   List<NoteModel>mData = [];
@@ -41,7 +44,6 @@ class _HomePageState extends State<HomePage> {
   List<String>typeList=['Debit','Credit','Loan','brow', 'loan'];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     getNotes();
   }
@@ -201,11 +203,11 @@ class _HomePageState extends State<HomePage> {
 
       /// unique date tu match hoise na nai check kora hoise
       for (NoteModel eachNotes2 in allNote) {
-        String eachDate2 = mFormet.format(DateTime.fromMillisecondsSinceEpoch(
+           String eachDate2 = mFormet.format(DateTime.fromMillisecondsSinceEpoch(
             int.parse(eachNotes2.created_atM)));
 
         if (uniuedates == eachDate2) {
-          ecahDateNotes.add(eachNotes2);
+           ecahDateNotes.add(eachNotes2);
 
           if (eachNotes2.typeM == 'Debit') {
             totalAmount += eachNotes2.amountM;
